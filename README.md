@@ -2,112 +2,91 @@
 
 ![Design preview for the Hotel booking confirmation page coding challenge](./preview.jpg)
 
-## Welcome! 👋
+# Hotel Booking Confirmation Page
 
-Thanks for checking out this coding challenge.
+![Design preview for the Hotel Booking Confirmation Page](./preview.jpg)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+A responsive hotel booking confirmation page built as a Frontend Mentor challenge.
 
-**To do this challenge, you need a good understanding of HTML and CSS.** A little JavaScript is optional for the interactive touches, like opening the navigation menu and copying the Wi-Fi password.
+## Overview
 
-## The challenge
+This project is a hotel booking confirmation page designed to work across desktop and mobile screen sizes.
 
-Build a hotel booking confirmation page and get it looking as close to the design as possible.
+The page includes a branded sidebar, overlapping information cards, a booking receipt, a host note, and different sections for arrival, Wi-Fi, and breakfast information.
 
-The page pairs a branded sidebar with a stack of overlapping cards: a printed-style receipt, a warm note from the host, and a row of arrival, Wi-Fi, and breakfast details. The layered cards, the mix of serif, sans-serif, and monospace type, and the responsive behavior are where most of the work is.
+I also added several interactive and visual elements with JavaScript and CSS, including animations, hover effects, a mobile navigation menu, and a Wi-Fi password copy button.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+## Built with
 
-Your users should be able to:
+* HTML
+* CSS
+* JavaScript
+* Flexbox
+* Responsive design
 
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
-- Open and close the navigation menu on smaller screens (optional JavaScript)
-- Copy the Wi-Fi password to their clipboard using the copy button (optional JavaScript)
+## Features
 
-## Ideas to test yourself
+* Responsive layout for desktop and mobile
+* Mobile navigation menu
+* Wi-Fi password copy button
+* Hover and focus interactions
+* Animated and interactive cards
+* Gradient backgrounds
+* Perspective movement on the middle cards
+* Responsive card layout
 
-The design gives you plenty to build. If you want to push further, here are some optional extensions to try:
+## What I learned
 
-- Add a working copy button so guests can copy the Wi-Fi password in one click
-- Make the sidebar navigation collapse into a toggleable menu on smaller screens
-- Animate the receipt and host-note cards so they fan out on hover
-- Wire up the "Print receipt" button to open a clean print view using the browser's print dialog
-- Generate an "Add to calendar" file from the stay dates so guests can save their booking
-- Load the booking details from a JSON file instead of hardcoding them
+One of the main things I practiced with this project was **Flexbox**. I hadn't used flex displays in a long time, and this project gave me a good opportunity to use them again.
 
-## Getting started
+I was surprised by how quickly Flexbox helped me handle the responsive layout. It made it much easier to organize the different cards and adapt the page to different screen sizes.
 
-### What's included
+I also practiced using JavaScript for visual and interactive elements. I don't use JavaScript as often, so working on things like the card perspective effect, animations, the navigation menu, and the copy button was a good way to get more comfortable with it.
 
-Your task is to build out the project to the designs inside the `/design` folder. You'll find a mobile and a desktop version of the design, plus the open navigation menu and the hover and focus states.
+I also learned more about how CSS layout decisions can affect responsiveness. Some of the problems I encountered came from adding individual elements and flex containers before having a completely organized layout.
 
-In your download:
+## Challenges
 
-- Mobile and desktop designs (JPG format)
-- All required assets in the `/assets` folder
-- Variable and static font files (or link to Google Fonts)
-- `style-guide.md` with colors, fonts, and other design specs
+The main challenge was making the page responsive while keeping the visual design of the original reference.
 
-**Want more accurate builds?** The designs are in JPG static format, which means you'll need to use your best judgment for styles such as `font-size`, `padding`, and `margin`. If you'd like the Figma design file to help build a more accurate solution faster, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+Flexbox helped a lot, but I still encountered some issues on smaller screens. In particular, the mobile version currently has some bugs below around 400px wide, where the body can develop an unexpected horizontal offset.
 
-## Using AI coding assistants
+I used the browser's web inspector extensively to test different values and understand where the problem was coming from. Changing some values directly in the inspector sometimes fixed the issue, which made it harder to identify the actual cause.
 
-We've included two files to help you if you're using AI coding assistants (like Claude, GitHub Copilot, Cursor, etc.) while working on this challenge:
+I suspect that some of the middle cards may be too large for very small screens, or that the way some of the layers are organized is contributing to the problem. I haven't completely identified the cause yet.
 
-- `AGENTS.md` - Contains detailed instructions for AI assistants on how to help you with this challenge. It's tailored to this challenge's difficulty level, so the AI will provide guidance appropriate to your learning stage—offering more support for beginner challenges and encouraging more independence on advanced ones.
-- `CLAUDE.md` - A pointer file that directs Claude-based tools to the AGENTS.md instructions.
+Another challenge was creating some of the visual effects with JavaScript. Since I don't use JavaScript that often, I had to experiment quite a bit to get the interactions to behave the way I wanted.
 
-**How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
+## What I'm proud of
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
+I'm most proud of how the website turned out overall, especially the responsive design, the visual implementation, and the different components I created.
 
-## Building your project
+I'm particularly happy with the hover perspective movement of the middle cards. I made this effect with JavaScript, which isn't something I usually work with, so it was a nice opportunity to practice.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+I'm also proud of how Flexbox helped me handle responsiveness much faster than I expected.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+## What I would do differently
 
-### Want some support on the challenge?
+If I were to redo this project, I would prioritize the layout and responsiveness before adding every flex display and every card.
 
-[Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+I think some of the issues I have on smaller screens could have been avoided by having a better layer and layout organization from the beginning.
 
-## Deploying your project
+I would also spend more time planning the structure of the page before implementing the individual visual elements. This would make the CSS easier to maintain and probably make the responsive behavior more predictable.
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+## Known issues
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+* The mobile layout can have a horizontal offset below approximately 400px wide.
+* Some cards may need further adjustments for very small screen sizes.
+* The exact cause of the mobile offset has not been fully identified yet.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://www.frontendmentor.io/guides/hosting-your-solution).
+## Links
 
-## Submitting your solution
+* [Live website](#)
+* [Frontend Mentor challenge](https://www.frontendmentor.io/)
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://www.frontendmentor.io/guides/how-to-submit-solutions) for tips on how to do this.
+## Credits
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+This project was created as part of a [Frontend Mentor](https://www.frontendmentor.io/) challenge.
 
-**We strongly recommend overwriting this `README.md` with a custom one.** We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code. The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings.
+Frontend Mentor provides realistic design challenges to practice HTML, CSS, JavaScript, and responsive web development.
 
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Submit it on the platform and share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community)
-2. Share on [X (formerly Twitter)](https://x.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in your post. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on [LinkedIn](https://www.linkedin.com/company/frontend-mentor/).
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-**This challenge is completely free. Please share it with anyone who will find it useful for practice.**
-
-**Have fun building!** 🚀

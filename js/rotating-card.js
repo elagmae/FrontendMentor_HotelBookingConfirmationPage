@@ -12,7 +12,7 @@ function rotate(e)
 	const force = 10;
 	const offsetY = -(e.offsetY - cardItem.offsetHeight/2)/force;
 	const offsetX = (e.offsetX - cardItem.offsetWidth/2)/force;
-	cardItem.style.transform = 'rotateX(' + offsetY + 'deg) rotateY(' + offsetX + 'deg)';
+	cardItem.style.transform = `rotateX(${offsetY}deg) rotateY(${offsetX}deg)`
 }
 
 function clearRotate(e)
@@ -25,6 +25,6 @@ function clearRotate(e)
         const defaultRot = siblingIndex % 2 === 0 ? -4 : 4;
 
         cardItem.style.transform =
-            'rotateX(0) rotateY(0) rotateZ(' + defaultRot + 'deg)';
+            `rotateX(0deg) rotateY(0deg) rotateZ(${defaultRot}deg)`
     }
 }

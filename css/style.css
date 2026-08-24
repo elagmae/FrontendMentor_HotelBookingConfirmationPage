@@ -37,7 +37,7 @@ p
 
 h1
 {
-    font-family: "Frances", serif;
+    font-family: "Fraunces", serif;
     font-style: none;
     font-weight: 500;
     font-size:38px;
@@ -46,7 +46,7 @@ h1
 
 h3
 {
-    font-family: "Frances", serif;
+    font-family: "Fraunces", serif;
     font-style: none;
     font-weight: 600;
     font-size:35px;
@@ -56,7 +56,7 @@ h3
 
 h4
 {
-    font-family: "Frances", serif;
+    font-family: "Fraunces", serif;
     font-weight: 600;
     font-size:22px;
     padding:0;
@@ -280,8 +280,7 @@ nav-item:hover, nav-item p:hover
 main
 {
     padding:15px;
-    width:100%;
-    margin:20px;
+    box-sizing: border-box;
 }
 
 header
@@ -498,7 +497,7 @@ info-card img
     padding-bottom:15px;
 }
 
-#receipt_infos, #line_price, #total_pay, #card_code
+#receipt_infos, .line_price, #total_pay, #card_code
 {
     display: flex;
     justify-content: space-between;

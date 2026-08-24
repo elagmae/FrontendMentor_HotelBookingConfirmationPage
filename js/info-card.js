@@ -20,7 +20,7 @@ class InfoCard extends HTMLElement
             <div id="card_header">
                 <img src=${icon} style="background-color:${color}">
                 <span style="color:${color}">${title}</span>
-                <p id="card_number" style="color:${color};">${number}<p>
+                <p id="card_number" style="color:${color};">${number}</p>
             </div>
 
             <div id="card_base">

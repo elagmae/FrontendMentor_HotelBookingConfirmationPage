@@ -11,7 +11,7 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution { font-size: 0.6875rem; text-align: center; margin-top:10px;}
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 
@@ -33,24 +33,24 @@
 
   <!-- Sidebar starts -->
   <aside id="aside_mobile">
-      <img id="sun_illustration" alt="sun_icon" src="assets\images\illustration-sun.svg">
+      <img id="sun_illustration" alt="" src="assets\images\illustration-sun.svg">
       <address>
         <p class="elegant">Maison</p> 
         <h4>Soleil</h4>
       </address>
 
-      <button id="open_menu"><img src="assets\images\icon-menu.svg" onclick="OpenMenu()"></button>
+      <button id="open_menu" onclick="OpenMenu()"><img src="assets\images\icon-menu.svg" alt="menu opener"></button>
   </aside>
 
   <aside id="aside_pc">
 
     <section>
-      <img id="sun_illustration" alt="sun_icon" src="assets\images\illustration-sun.svg">
+      <img id="sun_illustration" alt="" src="assets\images\illustration-sun.svg">
       <address>
         <p class="elegant">Maison</p> 
         <h4>Soleil</h4>
       </address>
-      <button id="close_menu"><img src="assets\images\icon-close.svg" onclick="CloseMenu()"></button>
+      <button id="close_menu" onclick="CloseMenu()"><img src="assets\images\icon-close.svg" alt="menu closer"></button>
     </section>
 
   <!-- Guest navigation -->
@@ -66,7 +66,7 @@
 
     <!-- Local weather -->
     <article>
-      <img id="weather_icon" alt="weather_icon" src="assets\images\icon-weather.svg">
+      <img id="weather_icon" alt="" src="assets\images\icon-weather.svg">
       <p class="typewriter">Today in Cassis</p>
       <h3>27°</h3>
       <p>Sunny · light breeze</p>
@@ -117,13 +117,13 @@
       </div>
 
       <div id="check" class="typewriter">
-        <div id="check_item">
+        <div class="check_item">
           <p>Check in</p>
           <h3>25 Apr</h3>
           <p>Saturday · 15:00</p>
         </div>  
 
-        <div id="check_item">
+        <div class="check_item">
           <p>Check out</p>
           <h3>29 Apr</h3>
           <p>  Wednesday · 11:00</p>
@@ -132,17 +132,17 @@
 
       <div id="prices" class="typewriter">
 
-        <div id="line_price">
+        <div class="line_price">
           <span>Room · La Garrigue · 4 nights</span>
           <span>€ 620.00</span>
         </div>
   
-        <div id="line_price">
+        <div class="line_price">
           <span>Breakfast · 2 guests</span>
           <span>€ 96.00</span>
         </div>
 
-        <div id="line_price">
+        <div class="line_price">
           <span>Tourist tax</span>
           <span>€ 14.40</span>
         </div>
@@ -158,7 +158,7 @@
 
         <div id="card_code" class="minicaps">
           <span>Paid · Wise · GBP</span>
-          <span><img id="barcode" src="assets\images\icon-barcode.svg"></span>
+          <span><img id="barcode" src="assets\images\icon-barcode.svg" alt="barcode to scan"></span>
         </div>
   
       </div>
@@ -173,7 +173,7 @@
 
       <div id="host_header">
         <span class="minicaps">Welcome card</span>
-        <img src="assets\images\icon-sun.svg">
+        <img src="assets\images\icon-sun.svg" alt="">
       </div>
 
       <div id="host_base">
@@ -196,9 +196,9 @@
   </div>
 
   <div id="hover_to_fan" class="minicaps">
-    <img src="assets\images\icon-sparkle.svg">
+    <img src="assets\images\icon-sparkle.svg" alt="">
     <span>Hover to fan</span>
-    <img src="assets\images\icon-sparkle.svg">
+    <img src="assets\images\icon-sparkle.svg" alt="">
   </div>
 
   <!-- Guest info row starts -->
@@ -255,8 +255,6 @@
   <!-- Guest info row ends -->
 
   <!-- Main content ends -->
-
-  <br>
 
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
