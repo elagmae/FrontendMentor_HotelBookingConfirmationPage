@@ -1,0 +1,426 @@
+/* #region Fonts */
+
+p
+{
+    position: relative;
+    margin:0;
+    font-size: 14px;
+}
+
+h1
+{
+    font-family: "Frances", serif;
+    font-style: none;
+    font-weight: 500;
+    font-size:38px;
+    margin:0;
+}
+
+h3
+{
+    font-family: "Frances", serif;
+    font-style: none;
+    font-weight: 600;
+    font-size:35px;
+    padding:0;
+    margin:0;
+}
+
+h4
+{
+    font-family: "Frances", serif;
+    font-weight: 600;
+    font-size:22px;
+    padding:0;
+    margin:0;
+}
+
+.elegant
+{
+    color:hsl(15, 74%, 41%);
+    font-style: italic;
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+}
+
+.typewriter
+{
+    font-family: "DM Mono", monospace;
+    font-weight:400;
+}
+
+/* #endregion TextStyles */
+
+/* #region General */
+
+img
+{
+    width:40px;
+    height:40px;
+}
+
+body
+{
+    --sidebar-size : 40vh;
+
+    display:flex;
+    height:100vh;
+    width:auto;
+    margin:auto;
+
+    background-color: hsl(30, 24%, 93%);
+}
+
+/* #endregion General */
+
+/* #region Sidebar */
+
+aside
+{
+    display: flex;
+    flex-direction: column;
+    
+    width:var(--sidebar-size);
+
+    padding:1.5vh;
+
+    border-right:1px;
+    border-right-style: solid;
+    border-right-color: hsl(33, 17%, 41%);
+}
+
+section
+{
+    display:flex;
+    padding-bottom:1.5vh;
+    height:auto;
+    justify-items: left;
+    align-items: center;
+
+    border-bottom:1px;
+    border-bottom-style: solid;
+    border-bottom-color: hsl(33, 17%, 41%);
+}
+
+map
+{
+    display: flex;
+    flex-direction: column;
+    height:fit-content;
+
+
+    padding-top:1.5vh;
+
+    border-top:1px;
+    border-top-style: solid;
+    border-top-color: hsl(33, 17%, 41%);
+}
+
+map p
+{
+    &:not(:last-child)  
+    {
+       margin-bottom: 1vh;
+    }
+}
+
+article
+{
+    display: flex;
+    flex-direction: column;
+    margin-top:auto;
+    position: relative;
+    
+    background-color: hsl(44, 84%, 75%);
+
+    padding:1.5vh;
+    margin-bottom:1.5vh;
+
+    min-height:fit-content;
+    height:50px;
+
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+article #weather_icon
+{
+    display:block;
+    position:absolute;
+
+    top: -3vh;
+    right:-2vh;
+
+    width:100px;
+    height:100px;
+}
+
+nav
+{
+    padding-top:1vh;
+}
+
+nav-item
+{
+    transition: 0.4s;
+    position: relative;
+    display:flex;
+    align-items:center;
+
+    border-radius: 4px;
+}
+
+nav-item img
+{
+    height:20px;
+    width:20px;
+    padding:1vh;
+}
+
+nav-item mark
+{
+    position: absolute;
+    display: flex;
+
+    right:1vh;
+    font-size:12px;
+    background-color: hsl(15, 69%, 37%);
+    color:hsl(0, 0%, 100%);
+
+    padding:1vh;
+    border-radius: 100px;
+    height:4px !important;
+    width:4px !important;
+
+    align-items: center;
+}
+
+nav-item:hover
+{
+    transition: 0.4s;
+    background-color: hsl(0, 0%, 100%);
+}
+
+/* #endregion Sidebar */
+
+/* #region Main */
+
+main
+{
+    padding:1.5vh;
+    width:100%;
+    margin:2vh;
+}
+
+header
+{
+    position: relative;
+    display:flex;
+    align-items:center;
+}
+
+#menu_actions
+{
+    position:absolute;
+    right:0;
+}
+
+#menu_actions button
+{
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 1px;
+    padding:0.6vh 1.2vh 0.6vh 1.2vh;
+}
+
+#add_to_calendar
+{
+    background-color: hsl(33, 15%, 15%);
+    color: hsl(0, 0%, 100%);
+}
+
+#print_receipt
+{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(33, 15%, 15%);
+}
+
+summary
+{
+    display:flex;
+}
+
+#card_section
+{
+    position: relative;
+    display:flex;
+    margin-bottom:1vh;
+    margin-top:8vh;
+    height:350px;
+    justify-content: center;
+    align-content:center;
+    gap:1.5vh;
+
+    height:fit-content !important;
+}
+
+#hover_to_fan
+{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+    margin-bottom: 4vh;
+}
+
+#hover_to_fan img
+{
+    margin:1vh;
+    height:10px;
+    width:1dvb;
+}
+
+/* #endregion Main */
+
+/* #region InfoCards */
+
+info-card
+{
+    display: block;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    padding:1.5vh;
+    width:100%;
+
+    &:not(:last-child)  
+    {
+       margin-right: 1.5vh;
+    }
+}
+
+info-card img
+{
+    border-radius:8px;
+    width:20px;
+    height:20px;
+    padding:0.4vh;
+}
+
+#card_header
+{
+    position: relative;
+    display:flex;
+    align-items:center;
+    padding-bottom: 3vh;
+}
+
+#card_header span
+{
+    padding-left:1vh;
+    font-variant-caps:all-small-caps ;
+}
+
+#card_number
+{
+    position: absolute;
+    right:0;
+    font-size:22px;
+}
+
+#card_base h4, p
+{
+    padding-bottom:0.6vh;
+}
+
+/* #endregion InfoCards */
+
+/* #region Receipt */
+
+#receipt_card
+{
+    z-index: 2;
+
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+
+    height:380px;
+    width:390px;
+
+    transform: rotateZ(-4deg);
+    padding:1vh;
+}
+
+#receipt, #check
+{
+    border-bottom-style: dotted;
+    padding:1vh;
+}
+
+#prices
+{
+    padding:1vh;
+    border-bottom:solid;
+}
+
+#check
+{
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+}
+
+#total_pay, #card_code
+{
+    position:relative;
+    display: flex;
+    padding:1vh;
+    align-items:center;
+}
+
+/* #endregion Receipt */
+
+/* #region Booking */
+
+#host_card
+{
+    z-index: 3;
+    padding:1vh;
+
+    background-color: hsl(15, 74%, 41%);
+    border-radius: 8px;
+
+    height:380px;
+    width:390px;
+
+    transform: rotateZ(4deg);
+
+    color:hsl(0, 0%, 100%);
+}
+
+#host_header
+{
+    position:relative;
+    margin: 2vh;
+    padding-top:1vh;
+    border-top-style: dotted;
+}
+
+#host_header img
+{
+    position: absolute;
+    right:0;
+    width:60px;
+    height:60px;
+}
+
+#host_base
+{
+    margin: 2vh;
+}
+
+#host_header span
+{
+    font-variant-caps: all-small-caps;
+}
+
+/* #endregion Booking */
