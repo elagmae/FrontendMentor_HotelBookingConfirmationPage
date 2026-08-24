@@ -20,16 +20,29 @@
   </style>
 
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-mobile.css" rel="stylesheet">
 
   <script src="js/nav-item.js" defer></script>
   <script src="js/info-card.js" defer></script>
   <script src="js/rotating-card.js" defer></script>
+  <script src="js/copy-password.js" defer></script>
+  <script src="js/menu-handler.js" defer></script>
 
 </head>
 <body>
 
   <!-- Sidebar starts -->
-  <aside>
+  <aside id="aside_mobile">
+      <img id="sun_illustration" alt="sun_icon" src="assets\images\illustration-sun.svg">
+      <address>
+        <p class="elegant">Maison</p> 
+        <h4>Soleil</h4>
+      </address>
+
+      <button id="open_menu"><img src="assets\images\icon-menu.svg" onclick="OpenMenu()"></button>
+  </aside>
+
+  <aside id="aside_pc">
 
     <section>
       <img id="sun_illustration" alt="sun_icon" src="assets\images\illustration-sun.svg">
@@ -37,6 +50,7 @@
         <p class="elegant">Maison</p> 
         <h4>Soleil</h4>
       </address>
+      <button id="close_menu"><img src="assets\images\icon-close.svg" onclick="CloseMenu()"></button>
     </section>
 
   <!-- Guest navigation -->
@@ -71,7 +85,7 @@
 
   <main>
 
-    <p class="typewriter">Booking · Confirmed</p>
+    <p class="minicaps">Booking · Confirmed</p>
 
     <header>
       <h1>Bienvenue, <span class="elegant">Lucia.</span></h1>
@@ -183,7 +197,7 @@
 
   <div id="hover_to_fan" class="minicaps">
     <img src="assets\images\icon-sparkle.svg">
-    <span>Fan to hover</span>
+    <span>Hover to fan</span>
     <img src="assets\images\icon-sparkle.svg">
   </div>
 
@@ -216,7 +230,7 @@
 
       <div id="password">
         <span class="minicaps">Password</span>
-        <span>soleil-2026 <button class="typewriter" id="copy">Copy</button></span>
+        <span >soleil-2026<button class="typewriter" id="copy" onclick="CopyPassword()">Copy</button></span>
         
       </div>
 
