@@ -12,7 +12,7 @@ class InfoCard extends HTMLElement
         const title = this.getAttribute("title") || "Title";
         const subtitle = this.getAttribute("subtitle") || "Subtitle";
         const legend = this.getAttribute("legend") || "Legend";
-        const description = this.getAttribute("description") || "Description";
+        const description = this.getAttribute("description") || this.innerHTML;
 
         // our custom code...
         this.innerHTML = 
@@ -20,7 +20,7 @@ class InfoCard extends HTMLElement
             <div id="card_header">
                 <img src=${icon} style="background-color:${color}">
                 <span style="color:${color}">${title}</span>
-                <p id="card_number" style="color:${color}">${number}<p>
+                <p id="card_number" style="color:${color};">${number}<p>
             </div>
 
             <div id="card_base">

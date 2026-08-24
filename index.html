@@ -19,10 +19,10 @@
     @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
   </style>
 
-  <link href="CSS/style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
-  <script src="nav-item.js" defer></script>
-  <script src="info-card.js" defer></script>
+  <script src="js/nav-item.js" defer></script>
+  <script src="js/info-card.js" defer></script>
 
 </head>
 <body>
@@ -87,13 +87,20 @@
   <!-- Receipt card -->
     <div id="receipt_card">
       <div id="receipt">
-        <span>Receipt</span>
-        <span>№ MS-2026 0421-AH</span>
+  
+        <div id="receipt_infos" class="typewriter">
+          <span>Receipt</span>
+          <span>№ MS-2026</span>
+          
+        </div>
+
+        <code class="typewriter">0421-AH</code>
 
         <h4>Your stay</h4>
+
       </div>
 
-      <div id="check">
+      <div id="check" class="typewriter">
         <div id="check_item">
           <p>Check in</p>
           <h3>25 Apr</h3>
@@ -107,7 +114,7 @@
         </div>
       </div>
 
-      <div id="prices">
+      <div id="prices" class="typewriter">
 
         <div id="line_price">
           <span>Room · La Garrigue · 4 nights</span>
@@ -126,14 +133,18 @@
   
       </div>
 
-      <div id="total_pay">
-        <span>Total paid</span>
-        <span>€ 730.40</span>
-      </div>
+      <div id="total_receipt">
 
-      <div id="card_code">
-        <span>Paid · Wise · GBP</span>
-        <span><img src="assets\images\icon-barcode.svg"></span>
+        <div id="total_pay">
+          <p class="minicaps">Total paid</p>
+          <h3>€ 730.40</h3>
+        </div>
+
+        <div id="card_code" class="minicaps">
+          <span>Paid · Wise · GBP</span>
+          <span><img id="barcode" src="assets\images\icon-barcode.svg"></span>
+        </div>
+  
       </div>
 
     </div>
@@ -142,21 +153,24 @@
     <div id="host_card">
 
       <div id="host_header">
-        <span>Welcome card</span>
+        <span class="minicaps">Welcome card</span>
         <img src="assets\images\icon-sun.svg">
       </div>
 
       <div id="host_base">
         <p>A note from your host,</p>
-        <h3>Margaux.</h3>
-
-        <p>
-          We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat - Poivre - pretending not to notice you. 
-        </p>
-
-        <p>Room</p>
-        <p>La Garrigue</p>
+        <h3 class="elegant">Margaux.</h3>
       </div>
+
+      <span>
+        We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat - Poivre - pretending not to notice you. 
+      </span>
+
+      <div id="host_description">
+          <p class="minicaps">Room</p>
+          <p class="elegant">La Garrigue</p>
+      </div>
+
     </div>
 
   <!-- Booking cards end -->
@@ -189,15 +203,19 @@
     title="Wifi"
     subtitle="Le Soleil · Guest"
     legend="Password below"
-    description=
-    "
-      Network
-      Le Soleil · Guest
-      Password
-      soleil-2026
-      Copy
-    "
-  ></info-card>
+  >
+      <div id="network">
+        <span class="minicaps">Network</span>
+        <span>Le Soleil · Guest</span>
+      </div>
+
+      <div id="password">
+        <span class="minicaps">Password</span>
+        <span>soleil-2026 <button class="typewriter" id="copy">Copy</button></span>
+        
+      </div>
+
+  </info-card>
 
   <!-- Breakfast -->
 

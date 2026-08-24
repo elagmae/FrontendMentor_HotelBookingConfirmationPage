@@ -1,7 +1,35 @@
 /* #region Fonts */
+@font-face {
+    font-family: "DM Mono";
+    src: url("../fonts/dm-mono/DMMono-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DM Mono";
+    src: url("../fonts/dm-mono/DMMono-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Fraunces";
+    src: url("../fonts/fraunces/Fraunces-VariableFont_....ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Fraunces";
+    src: url("../fonts/fraunces/Fraunces-Italic-Variable....ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: italic;
+}
 
 p
 {
+    font-family: "DM Sans", serif;
     position: relative;
     margin:0;
     font-size: 14px;
@@ -46,7 +74,16 @@ h4
 .typewriter
 {
     font-family: "DM Mono", monospace;
-    font-weight:400;
+    font-weight:200;
+    color:hsl(33, 22%, 20%);
+}
+
+.minicaps
+{
+    text-transform: capitalize !important;
+    font-variant-caps: all-small-caps !important;
+    font-family: "DM Mono", monospace;
+    font-weight:100;
 }
 
 /* #endregion TextStyles */
@@ -62,11 +99,12 @@ img
 body
 {
     --sidebar-size : 40vh;
+    --card-size : 450px;
 
     display:flex;
-    height:100vh;
     width:auto;
     margin:auto;
+    user-select: none;
 
     background-color: hsl(30, 24%, 93%);
 }
@@ -79,6 +117,7 @@ aside
 {
     display: flex;
     flex-direction: column;
+    align-self: stretch;
     
     width:var(--sidebar-size);
 
@@ -86,7 +125,7 @@ aside
 
     border-right:1px;
     border-right-style: solid;
-    border-right-color: hsl(33, 17%, 41%);
+    border-right-color: hsl(33, 17%, 41%, 0.6);
 }
 
 section
@@ -99,7 +138,7 @@ section
 
     border-bottom:1px;
     border-bottom-style: solid;
-    border-bottom-color: hsl(33, 17%, 41%);
+    border-bottom-color: hsl(33, 17%, 41%, 0.6);
 }
 
 map
@@ -113,7 +152,7 @@ map
 
     border-top:1px;
     border-top-style: solid;
-    border-top-color: hsl(33, 17%, 41%);
+    border-top-color: hsl(33, 17%, 41%, 0.6);
 }
 
 map p
@@ -182,6 +221,9 @@ nav-item mark
     position: absolute;
     display: flex;
 
+    align-items:center;
+    justify-content: center;
+
     right:1vh;
     font-size:12px;
     background-color: hsl(15, 69%, 37%);
@@ -191,8 +233,6 @@ nav-item mark
     border-radius: 100px;
     height:4px !important;
     width:4px !important;
-
-    align-items: center;
 }
 
 nav-item:hover
@@ -222,7 +262,9 @@ header
 #menu_actions
 {
     position:absolute;
+    display: flex;
     right:0;
+    gap:1.5vh;
 }
 
 #menu_actions button
@@ -230,7 +272,7 @@ header
     border-radius: 50px;
     border-style: solid;
     border-width: 1px;
-    padding:0.6vh 1.2vh 0.6vh 1.2vh;
+    padding:1vh 2vh 1vh 2vh;
 }
 
 #add_to_calendar
@@ -256,12 +298,11 @@ summary
     display:flex;
     margin-bottom:1vh;
     margin-top:8vh;
-    height:350px;
-    justify-content: center;
-    align-content:center;
+    height:fit-content;
+    width: fit-content;
+    justify-self: center;
+    align-self:center;
     gap:1.5vh;
-
-    height:fit-content !important;
 }
 
 #hover_to_fan
@@ -289,13 +330,15 @@ info-card
     display: block;
     background-color: hsl(0, 0%, 100%);
     border-radius: 8px;
-    padding:1.5vh;
+    padding:2vh;
     width:100%;
 
     &:not(:last-child)  
     {
        margin-right: 1.5vh;
     }
+
+    box-shadow: 1px 6px 10px 1px hsla(33, 17%, 41%, 0.2);
 }
 
 info-card img
@@ -332,34 +375,75 @@ info-card img
     padding-bottom:0.6vh;
 }
 
+#network, #password
+{
+    display: flex !important;
+    background-color: hsl(30, 24%, 93%);
+    border-radius: 4px;
+    padding:0.5vh;
+    
+    justify-content:space-between;
+
+    &:not(:last-child)
+    {
+        margin-bottom: 1vh;
+    }
+}
+
+#copy
+{
+    font-variant-caps: all-small-caps;
+    border-color:hsl(36, 22%, 86%);
+    border-style: solid;
+    border-width: 1px;
+}
+
 /* #endregion InfoCards */
 
 /* #region Receipt */
 
 #receipt_card
 {
+    display: flex;
+    flex-direction: column;
+    align-content:space-between;
     z-index: 2;
 
     background-color: hsl(0, 0%, 100%);
-    border-radius: 8px;
+    border-radius: 10px;
 
-    height:380px;
-    width:390px;
+    height:var(--card-size);
+    width:var(--card-size);
 
     transform: rotateZ(-4deg);
     padding:1vh;
+
+    color:hsl(33, 22%, 20%);
+    box-shadow: 1px 10px 50px 1px hsla(33, 17%, 41%, 0.3);
 }
 
 #receipt, #check
 {
-    border-bottom-style: dotted;
-    padding:1vh;
+    border-bottom-style:dashed;
+    border-width: 1px;
+    margin:15px;
+    padding-bottom:15px;
+}
+
+#receipt_infos, #line_price, #total_pay, #card_code
+{
+    display: flex;
+    justify-content: space-between;
+    gap:50px;
 }
 
 #prices
 {
-    padding:1vh;
+    margin:15px;
+    padding-bottom:15px;
+
     border-bottom:solid;
+    border-width: 1px;
 }
 
 #check
@@ -371,38 +455,65 @@ info-card img
 
 #total_pay, #card_code
 {
-    position:relative;
     display: flex;
-    padding:1vh;
+    margin:15px;
     align-items:center;
+}
+
+#total_pay p
+{
+    font-size:20px;
+}
+
+#receipt code
+{
+    position:absolute;
+    display: flex;
+    justify-self: end;
+}
+
+#barcode
+{
+    width:auto;
 }
 
 /* #endregion Receipt */
 
-/* #region Booking */
+/* #region Host */
 
 #host_card
 {
     z-index: 3;
-    padding:1vh;
+    padding:10px;
 
-    background-color: hsl(15, 74%, 41%);
-    border-radius: 8px;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-content: space-between;
 
-    height:380px;
-    width:390px;
+    background: hsl(15, 69%, 37%);
+    background: linear-gradient(33deg,hsl(15, 69%, 37%) 0%, hsl(15, 74%, 41%) 32%, hsl(18, 62%, 47%) 55%, hsl(22, 72%, 56%) 86%);   
+    
+    border-radius: 10px;
+
+    height:var(--card-size);
+    width:var(--card-size);
 
     transform: rotateZ(4deg);
 
-    color:hsl(0, 0%, 100%);
+    color:hsl(0, 0%, 100%) !important;
+    box-shadow: 1px 10px 50px 1px hsla(22, 72%, 56%, 0.6);
 }
+
 
 #host_header
 {
     position:relative;
-    margin: 2vh;
-    padding-top:1vh;
-    border-top-style: dotted;
+    margin: 20px;
+    padding-top:10px;
+    border-top-style: dashed;
+    border-width: 1px;
+    margin-bottom:100px;
 }
 
 #host_header img
@@ -413,14 +524,42 @@ info-card img
     height:60px;
 }
 
-#host_base
+#host_base, #host_description, #host_card span:not(#host_header span)
 {
-    margin: 2vh;
+    margin: 20px !important;
+}
+
+#host_card span:not(#host_header span)
+{
+    text-align:justify !important;
+    gap:0;
+    display: flex;
+
+    color:hsl(0, 0%, 100%) !important;
+}
+
+#host_description
+{
+    position: absolute;
+    bottom:0;
+    left:0;
+
+}
+
+#host_description p
+{
+    color:hsl(0, 0%, 100%) !important;
 }
 
 #host_header span
 {
     font-variant-caps: all-small-caps;
+    
 }
 
-/* #endregion Booking */
+#host_base h3
+{
+    color:hsl(0, 0%, 100%) !important;
+}
+
+/* #endregion Host */
