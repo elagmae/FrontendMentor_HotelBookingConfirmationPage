@@ -23,6 +23,7 @@
 
   <script src="js/nav-item.js" defer></script>
   <script src="js/info-card.js" defer></script>
+  <script src="js/rotating-card.js" defer></script>
 
 </head>
 <body>
@@ -85,7 +86,8 @@
 
   <div id="card_section">
   <!-- Receipt card -->
-    <div id="receipt_card">
+    <div class="card">
+      <div id="receipt_card" class="card-item">
       <div id="receipt">
   
         <div id="receipt_infos" class="typewriter">
@@ -147,10 +149,13 @@
   
       </div>
 
+      </div>
+
     </div>
 
   <!-- Note from host card -->
-    <div id="host_card">
+   <div class="card">
+    <div id="host_card" class="card-item">
 
       <div id="host_header">
         <span class="minicaps">Welcome card</span>
@@ -170,13 +175,13 @@
           <p class="minicaps">Room</p>
           <p class="elegant">La Garrigue</p>
       </div>
-
+    </div>
     </div>
 
   <!-- Booking cards end -->
   </div>
 
-  <div id="hover_to_fan">
+  <div id="hover_to_fan" class="minicaps">
     <img src="assets\images\icon-sparkle.svg">
     <span>Fan to hover</span>
     <img src="assets\images\icon-sparkle.svg">
@@ -236,11 +241,15 @@
   <!-- Guest info row ends -->
 
   <!-- Main content ends -->
-  </main>
 
-  <!-- <footer class="attribution">
+  <br>
+
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Léa Pouthier</a>.
-  </footer> -->
+  </footer>
+
+  </main>
+
 </body>
 </html>

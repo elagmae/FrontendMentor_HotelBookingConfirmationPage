@@ -307,18 +307,34 @@ summary
 
 #hover_to_fan
 {
+    position: relative;
     display: flex;
     align-items: center;
     justify-self: center;
     text-align: center;
     margin-bottom: 4vh;
+    z-index: -1 !important;
 }
 
 #hover_to_fan img
 {
+    position: relative;
+    display: block;
     margin:1vh;
     height:10px;
     width:1dvb;
+    z-index: -1 !important;
+}
+
+.card
+{
+	perspective: 500px;
+	transform-style: preserve-3d;
+}
+
+.card-item
+{
+	transition: transform .2s;
 }
 
 /* #endregion Main */
@@ -344,8 +360,8 @@ info-card
 info-card img
 {
     border-radius:8px;
-    width:20px;
-    height:20px;
+    width: 30px;
+    height:30px;
     padding:0.4vh;
 }
 
@@ -404,10 +420,15 @@ info-card img
 
 #receipt_card
 {
+    height: 350px;
+	width: 350px;
+	background-color: #fff;
+	transition: transform .2s;
+
     display: flex;
     flex-direction: column;
     align-content:space-between;
-    z-index: 2;
+    z-index: 10;
 
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
@@ -483,7 +504,7 @@ info-card img
 
 #host_card
 {
-    z-index: 3;
+    z-index: 15;
     padding:10px;
 
     position: relative;
@@ -504,7 +525,6 @@ info-card img
     color:hsl(0, 0%, 100%) !important;
     box-shadow: 1px 10px 50px 1px hsla(22, 72%, 56%, 0.6);
 }
-
 
 #host_header
 {
@@ -563,3 +583,4 @@ info-card img
 }
 
 /* #endregion Host */
+
