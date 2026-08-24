@@ -481,7 +481,7 @@ info-card img
     z-index: 10;
 
     background-color: hsl(0, 0%, 100%);
-    border-radius: 10px;
+    border-radius: 14px;
 
     transform: rotateZ(-4deg);
     padding:1vw;
@@ -565,7 +565,7 @@ info-card img
     background: hsl(15, 69%, 37%);
     background: linear-gradient(33deg,hsl(15, 69%, 37%) 0%, hsl(15, 74%, 41%) 32%, hsl(18, 62%, 47%) 55%, hsl(22, 72%, 56%) 86%);   
     
-    border-radius: 10px;
+    border-radius: 14px;
 
     height:auto;
     width: min(var(--card-size), 90vw);
