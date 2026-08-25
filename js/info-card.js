@@ -24,7 +24,7 @@ class InfoCard extends HTMLElement
             </div>
 
             <div id="card_base">
-                <h4>${subtitle}</h4>
+                <h3>${subtitle}</h3>
                 <p class="typewriter">${legend}</p>
                 <p>${description}</p>
             </div>

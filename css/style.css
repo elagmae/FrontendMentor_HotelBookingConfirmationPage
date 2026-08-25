@@ -21,7 +21,7 @@ h2
 {
     font-family: "Fraunces", serif;
     font-style: none;
-    font-weight: 600;
+    font-weight: 500;
     font-size:35px;
     padding:0;
     margin:0;
@@ -30,7 +30,7 @@ h2
 h3
 {
     font-family: "Fraunces", serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size:22px;
     padding:0;
     margin:0;
@@ -414,8 +414,9 @@ info-card img
 
 #card_header span
 {
+    font-family: "DM Mono", monospace;
     padding-left:1vw;
-    font-variant-caps:all-small-caps ;
+    text-transform: uppercase;
 }
 
 #card_number
