@@ -22,6 +22,7 @@
   <link href="./css/style.css" rel="stylesheet">
   <link href="./css/style-mobile.css" rel="stylesheet">
 
+  <script src="./js/object-fit.js"></script>
   <script src="./js/nav-item.js" defer></script>
   <script src="./js/info-card.js" defer></script>
   <script src="./js/rotating-card.js" defer></script>
@@ -33,30 +34,20 @@
 
   <!-- Sidebar starts -->
   <aside id="aside_mobile">
-      <img id="sun_illustration" alt="" src="assets\images\illustration-sun.svg">
-      <address>
-        <p class="elegant">Maison</p> 
-        <h4>Soleil</h4>
-      </address>
-
+      <img id="logo" alt="" src="assets\images\logo.svg">
       <button id="open_menu" onclick="OpenMenu()"><img src="assets\images\icon-menu.svg" alt="menu opener"></button>
   </aside>
 
   <aside id="aside_pc">
 
-    <section>
-      <img id="sun_illustration" alt="" src="assets\images\illustration-sun.svg">
-      <address>
-        <p class="elegant">Maison</p> 
-        <h4>Soleil</h4>
-      </address>
+    <menu>
+      <img id="logo" alt="" src="assets\images\logo.svg">
       <button id="close_menu" onclick="CloseMenu()"><img src="assets\images\icon-close.svg" alt="menu closer"></button>
-    </section>
+    </menu>
 
   <!-- Guest navigation -->
 
     <nav>
-
       <nav-item icon="assets\images\icon-bed.svg" title="Your stay" alerts="1"></nav-item>
       <nav-item icon="assets\images\icon-house.svg" title="The house"></nav-item>
       <nav-item icon="assets\images\icon-pin.svg" title="Around town"></nav-item>
@@ -68,15 +59,15 @@
     <article>
       <img id="weather_icon" alt="" src="assets\images\icon-weather.svg">
       <p class="typewriter">Today in Cassis</p>
-      <h3>27°</h3>
+      <h2>27°</h2>
       <p>Sunny · light breeze</p>
     </article>
 
-    <map class="typewriter">
+    <section id="position" class="typewriter">
       <p>Est. 1987</p>
       <p>Maison Soleil · 12 Rue des Oliviers · Cassis</p>
       <p>© 2026 Maison Soleil</p>
-    </map>
+    </section>
 
   <!-- Sidebar ends -->
   </aside>
@@ -112,20 +103,20 @@
 
         <code class="typewriter">0421-AH</code>
 
-        <h4>Your stay</h4>
+        <h3>Your stay</h3>
 
       </div>
 
       <div id="check" class="typewriter">
         <div class="check_item">
           <p>Check in</p>
-          <h3>25 Apr</h3>
+          <h2>25 Apr</h2>
           <p>Saturday · 15:00</p>
         </div>  
 
         <div class="check_item">
           <p>Check out</p>
-          <h3>29 Apr</h3>
+          <h2>29 Apr</h2>
           <p>  Wednesday · 11:00</p>
         </div>
       </div>
@@ -153,7 +144,7 @@
 
         <div id="total_pay">
           <p class="minicaps">Total paid</p>
-          <h3>€ 730.40</h3>
+          <h2>€ 730.40</h2>
         </div>
 
         <div id="card_code" class="minicaps">
@@ -178,7 +169,7 @@
 
       <div id="host_base">
         <p>A note from your host,</p>
-        <h3 class="elegant">Margaux.</h3>
+        <h2 class="elegant">Margaux.</h2>
       </div>
 
       <span>

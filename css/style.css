@@ -1,31 +1,4 @@
 /* #region Fonts */
-@font-face {
-    font-family: "DM Mono";
-    src: url("../fonts/dm-mono/DMMono-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "DM Mono";
-    src: url("../fonts/dm-mono/DMMono-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Fraunces";
-    src: url("../fonts/fraunces/Fraunces-VariableFont_....ttf") format("truetype");
-    font-weight: 100 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Fraunces";
-    src: url("../fonts/fraunces/Fraunces-Italic-Variable....ttf") format("truetype");
-    font-weight: 100 900;
-    font-style: italic;
-}
 
 p
 {
@@ -44,7 +17,7 @@ h1
     margin:0;
 }
 
-h3
+h2
 {
     font-family: "Fraunces", serif;
     font-style: none;
@@ -54,7 +27,7 @@ h3
     margin:0;
 }
 
-h4
+h3
 {
     font-family: "Fraunces", serif;
     font-weight: 600;
@@ -90,6 +63,9 @@ h4
 /* #endregion TextStyles */
 
 /* #region General */
+
+*, *::before, *::after { box-sizing: border-box; }
+
 img
 {
     width:40px;
@@ -99,13 +75,12 @@ img
 body
 {
     --sidebar-size : 25vw;
-    --card-size : 450px;
+    --card-size : 475px;
 
     margin: 0;
     padding: 0;
-    width: 100% !important;
-    min-width: 0;
-    overflow-x: hidden;
+    width: 100%;
+    min-height: 100%;
 
     display:flex;
     flex-wrap: nowrap;
@@ -142,25 +117,26 @@ aside
     border-right-color: hsl(33, 17%, 41%, 0.6);
 }
 
-section
+menu
 {
-    display:flex;
+    display:flex !important;
+    padding-left:0 !important;
     padding-bottom:1.5vw;
-    height:auto;
-    justify-items: left;
-    align-items: center;
+    height:fit-content;
+
+    justify-content: left;
+    align-content: center;
 
     border-bottom:1px;
     border-bottom-style: solid;
     border-bottom-color: hsl(33, 17%, 41%, 0.6);
 }
 
-map
+#position
 {
     display: flex;
     flex-direction: column;
     height:fit-content;
-
 
     padding-top:15px;
 
@@ -169,7 +145,7 @@ map
     border-top-color: hsl(33, 17%, 41%, 0.6);
 }
 
-map p
+#position p
 {
     &:not(:last-child)  
     {
@@ -232,6 +208,15 @@ nav-item
     color:hsl(33, 22%, 20%) !important;
 }
 
+#logo
+{
+    display: block;
+    width:115px;
+    height:auto;
+    margin:0 !important;
+    padding:0 !important;
+}
+
 nav-item p
 {
     display:flex;
@@ -241,8 +226,8 @@ nav-item p
 
 nav-item img
 {
-    height:20px;
-    width:20px;
+    height:35px;
+    width:35px;
     padding:6px;
 }
 
@@ -291,6 +276,14 @@ header
     height:fit-content !important;
 }
 
+#host_card, #receipt_card
+{
+    width: min(var(--card-size), 100vw);
+    min-height: var(--card-size);
+    height:auto;
+    box-sizing: border-box;
+}
+
 #menu_actions
 {
     position:absolute;
@@ -305,18 +298,20 @@ header
     border-radius: 50px;
     border-style: solid;
     border-width: 1px;
-    padding:10px 20px 10px 20px;
+    padding:8px 18px 8px 28px;
+    font-family: "DM Sans", sans-serif;
 }
 
 #add_to_calendar
 {
     background-color: hsl(33, 15%, 15%);
-    color: hsl(0, 0%, 100%);
+    color: hsl(30, 24%, 93%);;
 }
 
 #print_receipt
 {
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(30, 24%, 93%);
+    border-color:hsl(33, 17%, 41%);
     color: hsl(33, 15%, 15%);
 }
 
@@ -334,14 +329,14 @@ summary
 #card_section
 {
     position: relative;
-    display:flex;
-    margin-bottom:10px;
-    margin-top:80px;
-    height:fit-content;
+    display: flex;
+    margin: 80px 10px 10px;
+    height: fit-content;
     width: fit-content;
+    align-content: center ;
     justify-self: center;
-    align-self:center;
-    gap:15px;
+    justify-content: center !important;
+    gap: 15px;
 }
 
 #hover_to_fan
@@ -388,7 +383,7 @@ info-card
     
     background-color: hsl(0, 0%, 100%);
     border-radius: 8px;
-    padding:20px 20px 0px 20px;
+    padding:20px 20px 20px 20px;
     width:100%;
     margin:10px;
 
@@ -425,12 +420,13 @@ info-card img
 
 #card_number
 {
+    font-family: "Fraunces", sans-serif;
     position: absolute;
     right:0;
     font-size:22px;
 }
 
-#card_base h4, p
+#card_base h3, p
 {
     padding-bottom:0.6vw;
 }
@@ -465,12 +461,6 @@ info-card img
 
 #receipt_card
 {
-    height: auto;
-
-    width: min(var(--card-size), 90vw);
-     min-width: 0;
-
-    aspect-ratio: 1/1 !important;
 	background-color: #fff;
 	transition: transform .2s;
 
@@ -483,7 +473,6 @@ info-card img
     border-radius: 14px;
 
     transform: rotateZ(-4deg);
-    padding:1vw;
 
     color:hsl(33, 22%, 20%);
     box-shadow: 1px 10px 50px 1px hsla(33, 17%, 41%, 0.3);
@@ -501,7 +490,6 @@ info-card img
 {
     display: flex;
     justify-content: space-between;
-    gap:50px;
 }
 
 #prices
@@ -552,9 +540,6 @@ info-card img
 #host_card
 {
     z-index: 15;
-    padding:10px;
-    aspect-ratio: 1/1 !important;
-     min-width: 0;
 
     position: relative;
     display:flex;
@@ -565,9 +550,6 @@ info-card img
     background: linear-gradient(33deg,hsl(15, 69%, 37%) 0%, hsl(15, 74%, 41%) 32%, hsl(18, 62%, 47%) 55%, hsl(22, 72%, 56%) 86%);   
     
     border-radius: 14px;
-
-    height:auto;
-    width: min(var(--card-size), 90vw);
 
     transform: rotateZ(4deg);
 
@@ -626,7 +608,7 @@ info-card img
     
 }
 
-#host_base h3
+#host_base h2
 {
     color:hsl(0, 0%, 100%) !important;
 }
