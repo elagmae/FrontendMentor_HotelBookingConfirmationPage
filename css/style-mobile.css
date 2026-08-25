@@ -17,27 +17,42 @@
     aside:not(#aside_mobile)
     {
         display: none;
-        position: fixed;
-
-        width: 100vw;
-        height: 100vh;
-        box-sizing: border-box;
+        height: calc(100vh - 15px) !important;
+        padding:0;
+        top:15px;
     }
 
     #aside_mobile
     {
-        position: relative;
         display: flex;
-        flex-direction: row;
+    }
 
+    #position
+    {
+        padding-bottom:15px;
+    }
+
+    article, nav, #position
+    {
+        margin-right:15px;
+        margin-left:15px;
+    }
+
+    aside
+    {
+        position: relative;
         border-bottom: 1px solid hsl(33, 17%, 41%, 0.6);
         border-right: none;
 
-        margin: 0;
-        padding: 10px;
-
         width: 100% !important;
         box-sizing:border-box;
+    }
+
+    menu
+    {
+        margin:0;
+        padding-left:15px !important;
+        padding-bottom:15px !important;
     }
 
     #open_menu, #close_menu
@@ -55,7 +70,7 @@
         width:30px;
         align-self:center;
         justify-self:center;
-        aspect-ratio: 1/1;
+        aspect-ratio: 1;
     }
     
     #menu_actions 
