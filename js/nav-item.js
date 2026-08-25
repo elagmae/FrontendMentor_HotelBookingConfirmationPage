@@ -16,7 +16,7 @@ class NavItem extends HTMLElement
 
             ${alerts != 0  ? 
             `
-                <mark>${alerts}</mark>
+                <p id="alert">${alerts}</p>
             ` 
             : ""}
         `;

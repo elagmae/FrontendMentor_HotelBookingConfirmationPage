@@ -74,7 +74,7 @@ img
 
 body
 {
-    --sidebar-size : 25vw;
+    --sidebar-size : 30vw;
     --card-size : 475px;
 
     margin: 0;
@@ -231,7 +231,7 @@ nav-item img
     padding:6px;
 }
 
-nav-item mark
+nav-item #alert
 {
     position: absolute;
     display: flex;
@@ -244,10 +244,10 @@ nav-item mark
     background-color: hsl(15, 69%, 37%);
     color:hsl(0, 0%, 100%);
 
-    padding:8px;
+    padding:10px;
     border-radius: 100px;
-    height:4px !important;
-    width:4px !important;
+    height:10px !important;
+    width:10px !important;
 }
 
 nav-item:hover, nav-item p:hover
@@ -383,10 +383,9 @@ info-card
     
     background-color: hsl(0, 0%, 100%);
     border-radius: 8px;
-    padding:20px 20px 20px 20px;
+    padding:20px 20px 0 20px;
     width:100%;
     margin:10px;
-
     box-shadow: 1px 6px 10px 1px hsla(33, 17%, 41%, 0.2);
 }
 
@@ -412,7 +411,7 @@ info-card img
     padding-bottom: 20px;
 }
 
-#card_header span
+#card_header span 
 {
     font-family: "DM Mono", monospace;
     padding-left:1vw;
@@ -427,24 +426,24 @@ info-card img
     font-size:22px;
 }
 
-#card_base h3, p
-{
-    padding-bottom:0.6vw;
-}
-
 #network, #password
 {
     display: flex !important;
     background-color: hsl(30, 24%, 93%);
     border-radius: 4px;
-    padding:0.5vw;
+    padding:7px;
     
     justify-content:space-between;
 
     &:not(:last-child)
     {
-        margin-bottom: 1vw;
+        margin-bottom: 15px;
     }
+}
+
+info-card p 
+{
+    margin:10px;
 }
 
 #copy
