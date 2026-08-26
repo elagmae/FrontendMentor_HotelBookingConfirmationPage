@@ -78,6 +78,7 @@ body
     --card-size : 450px;
     --background-color:hsl(35, 60%, 96%);
     --border-color:hsl(36, 22%, 86%);
+    --text-color:hsl(33, 22%, 20%);
 
     margin: 0;
     padding: 0;
@@ -275,6 +276,15 @@ main
 {
     padding:30px !important;
     box-sizing: border-box;
+}
+
+#booking
+{
+    font-family: "DM Mono", monospace;
+    color:var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 100 !important;
 }
 
 header
