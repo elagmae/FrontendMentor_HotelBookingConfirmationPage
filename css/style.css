@@ -75,7 +75,7 @@ img
 body
 {
     --sidebar-size : 30vw;
-    --card-size : 475px;
+    --card-size : 450px;
     --background-color:hsl(35, 60%, 96%);
     --border-color:hsl(36, 22%, 86%);
 
@@ -170,7 +170,7 @@ article
     min-height:fit-content;
     height:50px;
 
-    border-radius: 12px;
+    border-radius: 15px;
     overflow: hidden;
 }
 
@@ -206,7 +206,7 @@ nav-item
     display:flex;
     align-items:center;
 
-    border-radius: 4px;
+    border-radius: 6px;
     color:hsl(33, 22%, 20%) !important;
 }
 
@@ -291,6 +291,7 @@ header
     min-height: var(--card-size);
     height:auto;
     box-sizing: border-box;
+    border-radius: 20px;
 }
 
 #menu_actions
@@ -309,6 +310,7 @@ header
     border-width: 1px;
     padding:8px 18px 8px 28px;
     font-family: "DM Sans", sans-serif;
+    font-weight: 600;
 }
 
 #add_to_calendar
@@ -391,7 +393,8 @@ info-card
     flex-direction: column;
     
     background-color: hsl(0, 0%, 100%);
-    border-radius: 8px;
+    border-radius: 15px;
+    border : solid var(--border-color) 1px;
     padding:20px 20px 0 20px;
     width:100%;
     margin:10px;
@@ -479,12 +482,11 @@ info-card p
     z-index: 10;
 
     background-color: hsl(0, 0%, 100%);
-    border-radius: 14px;
 
     transform: rotateZ(-4deg);
 
     color:hsl(33, 22%, 20%);
-    box-shadow: 1px 10px 50px 1px hsla(33, 17%, 41%, 0.3);
+    box-shadow: 1px 30px 30px 1px hsl(36, 22%, 86%);
 }
 
 #receipt, #check
@@ -560,9 +562,7 @@ info-card p
     align-content: space-between;
 
     background: hsl(15, 69%, 37%);
-    background: linear-gradient(33deg,hsl(15, 69%, 37%) 0%, hsl(15, 74%, 41%) 32%, hsl(18, 62%, 47%) 55%, hsl(22, 72%, 56%) 86%);   
-    
-    border-radius: 14px;
+    background: linear-gradient(33deg,hsl(15, 69%, 40%) 0%, hsl(15, 74%, 41%) 20%, hsl(18, 62%, 47%) 40%, hsl(22, 72%, 56%) 80%);   
 
     transform: rotateZ(4deg);
 
