@@ -86,5 +86,7 @@ This project was created as part of a [Frontend Mentor](https://www.frontendment
 
 Frontend Mentor provides realistic design challenges to practice HTML, CSS, JavaScript, and responsive web development.
 
+## Result
+
 ![Here is the result](./result.png)
 
