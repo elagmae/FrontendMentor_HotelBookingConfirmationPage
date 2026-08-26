@@ -369,6 +369,7 @@ header
     text-align: center;
     margin-bottom: 40px;
     z-index: -1 !important;
+    color:var(--text-color);
 }
 
 #hover_to_fan img
