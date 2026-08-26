@@ -1,5 +1,7 @@
 @media (max-width: 1200px)
 {
+    /* #region General */
+
     body
     {
         display: flex;
@@ -7,10 +9,7 @@
         flex-wrap: wrap;
     }
 
-    main
-    {
-        width:100% !important;
-    }
+    /* #endregion General */
 
     /* #region Aside */
 
@@ -61,6 +60,9 @@
         right:15px;
         height:fit-content;
         width:fit-content;
+        border: solid var(--border-color) 1px;
+        background-color: var(--background-color);
+        border-radius: 8px;
     }
 
     #open_menu img, #close_menu img
@@ -90,11 +92,21 @@
 
     /* #region Main */
 
-    #card_section, summary
+    main
+    {
+        width:100% !important;
+    }
+
+    #card_section, #main_infos
     {
         display: flex;
-        flex-direction: column !important;
+        flex-direction: column;
         justify-items: center !important;
+    }
+
+    #card_section
+    {
+        flex-direction: column-reverse !important;
     }
 
     header 
@@ -111,12 +123,17 @@
 
     #host_card, #receipt_card
     {
-        width: min(var(--card-size), 90vw) !important;
+        width: min(var(--card-size), 80vw) !important;
         min-height: var(--card-size);
         box-sizing: border-box;
     }
 
-    summary
+    #hover_to_fan
+    {
+        display: none;
+    }
+
+    #main_infos
     {
         display: flex;
         flex-wrap: nowrap;
@@ -128,8 +145,4 @@
 
     /* #endregion Main */
 
-    #hover_to_fan
-    {
-        display: none;
-    }
 }

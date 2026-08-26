@@ -76,6 +76,8 @@ body
 {
     --sidebar-size : 30vw;
     --card-size : 475px;
+    --background-color:hsl(35, 60%, 96%);
+    --border-color:hsl(36, 22%, 86%);
 
     margin: 0;
     padding: 0;
@@ -87,7 +89,7 @@ body
 
     user-select: none;
 
-    background-color: hsl(30, 24%, 93%);
+    background-color: var(--background-color);
 }
 
 /* #endregion General */
@@ -105,7 +107,7 @@ aside
     flex-direction: column;
     align-self: stretch;
 
-    background-color: hsl(30, 24%, 93%);
+    background-color: var(--background-color);
     z-index:100;
     
     width:var(--sidebar-size);
@@ -114,7 +116,7 @@ aside
 
     border-right:1px;
     border-right-style: solid;
-    border-right-color: hsl(33, 17%, 41%, 0.6);
+    border-right-color: var(--border-color);
 }
 
 menu
@@ -129,7 +131,7 @@ menu
 
     border-bottom:1px;
     border-bottom-style: solid;
-    border-bottom-color: hsl(33, 17%, 41%, 0.6);
+    border-bottom-color: var(--border-color);
 }
 
 #position
@@ -142,7 +144,7 @@ menu
 
     border-top:1px;
     border-top-style: solid;
-    border-top-color: hsl(33, 17%, 41%, 0.6);
+    border-top-color: var(--border-color);
 }
 
 #position p
@@ -231,6 +233,13 @@ nav-item img
     padding:6px;
 }
 
+nav-item:first-child
+{
+    transition: 0.3s;
+    background-color: hsl(0, 0%, 100%) !important;
+    color:hsl(33, 15%, 15%) !important;
+}
+
 nav-item #alert
 {
     position: absolute;
@@ -253,7 +262,7 @@ nav-item #alert
 nav-item:hover, nav-item p:hover
 {
     transition: 0.3s;
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(40, 60%, 98%);
     color:hsl(33, 15%, 15%) !important;
     transform: scale(101%);
 }
@@ -264,7 +273,7 @@ nav-item:hover, nav-item p:hover
 
 main
 {
-    padding:15px;
+    padding:30px !important;
     box-sizing: border-box;
 }
 
@@ -305,13 +314,13 @@ header
 #add_to_calendar
 {
     background-color: hsl(33, 15%, 15%);
-    color: hsl(30, 24%, 93%);;
+    color: var(--background-color);
 }
 
 #print_receipt
 {
-    background-color: hsl(30, 24%, 93%);
-    border-color:hsl(33, 17%, 41%);
+    background-color: var(--background-color);
+    border-color:var(--border-color);
     color: hsl(33, 15%, 15%);
 }
 
@@ -321,7 +330,7 @@ header
     transform: scale(110%);
 }
 
-summary
+#main_infos
 {
     display:flex;
 }

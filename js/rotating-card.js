@@ -25,6 +25,6 @@ function clearRotate(e)
         const defaultRot = siblingIndex % 2 === 0 ? -4 : 4;
 
         cardItem.style.transform =
-            `rotateX(0deg) rotateY(0deg) rotateZ(${defaultRot}deg)`
+            `rotateX(0deg) rotateY(0deg) rotateZ(${defaultRot}deg)`;
     }
 }
