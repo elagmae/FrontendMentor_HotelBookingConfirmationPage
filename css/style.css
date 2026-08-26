@@ -458,7 +458,7 @@ info-card p
 #copy
 {
     font-variant-caps: all-small-caps;
-    border-color:hsl(36, 22%, 86%);
+    border-color:var(--border-color);
     border-style: solid;
     border-width: 1px;
     margin-left:10px;
@@ -475,7 +475,7 @@ info-card p
 
     display: flex;
     flex-direction: column;
-    align-content:space-between;
+    align-content:space-between !important;
     z-index: 10;
 
     background-color: hsl(0, 0%, 100%);
@@ -489,8 +489,9 @@ info-card p
 
 #receipt, #check
 {
+    border-color:var(--border-color) !important;
     border-bottom-style:dashed;
-    border-width: 1px;
+    border-width: 1.5px;
     margin:15px;
     padding-bottom:15px;
 }
@@ -503,12 +504,15 @@ info-card p
 
 #prices
 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    color:hsl(32, 20%, 29%);
     margin:15px;
     padding-bottom:15px;
 
     border-bottom:solid;
     border-width: 1px;
-    font-size:12px;
+    font-size:14px;
 }
 
 #check
@@ -527,7 +531,7 @@ info-card p
 
 #total_pay p
 {
-    font-size:20px;
+    font-size:22px;
 }
 
 #receipt code
@@ -562,7 +566,7 @@ info-card p
 
     transform: rotateZ(4deg);
 
-    color:hsl(0, 0%, 100%) !important;
+    color:hsl(41, 100%, 93%) !important;
     box-shadow: 1px 10px 50px 1px hsla(22, 72%, 56%, 0.6);
 }
 
@@ -572,7 +576,7 @@ info-card p
     margin: 20px;
     padding-top:10px;
     border-top-style: dashed;
-    border-width: 1px;
+    border-width: 1.5px;
     margin-bottom:70px;
 }
 
@@ -594,6 +598,8 @@ info-card p
     text-align:justify !important;
     gap:0;
     display: flex;
+    font-family: "DM Sans", monospace;
+    font-size:16px;
 
     color:hsl(0, 0%, 100%) !important;
 }
@@ -613,13 +619,20 @@ info-card p
 
 #host_header span
 {
-    font-variant-caps: all-small-caps;
-    
+    font-family: "DM Mono", monospace !important;
 }
 
-#host_base h2
+#host_base h4
 {
+    font-size:40px;
+    padding:0;
+    margin:0;
     color:hsl(0, 0%, 100%) !important;
+}
+
+#host_base p
+{
+    font-family: "Fraunces", sans-serif !important;
 }
 
 /* #endregion Host */
